@@ -89,7 +89,7 @@ export const insertSql = {
 export const updateSql = {
     updateStudent: async (data) => {
         console.log(data);
-        const sql = `update student set name = "${data.Name}",email = "${data.Email}",phone = "${data.Phone}", major = "${data.Major}", did = "${data.D_id}" where id="${data.Id}"`;
+        const sql = `update student set name = "${data.Name}",email = "${data.Email}",phone = "${data.Phone}", major = "${data.Major}", did = "${data.Did}" where id="${data.Id}"`;
         console.log(sql);
         await promisePool.query(sql);
     }

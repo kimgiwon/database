@@ -11,9 +11,8 @@ router.get('/', async (req, res) => {
     });
 });
 
-router.post('/update', async (req, res) => {
+router.post('/', async (req, res) => {
     const vars = req.body;
-    console.log(vars.Name);
 
     const data = {
         Id: vars.Id,
@@ -21,7 +20,7 @@ router.post('/update', async (req, res) => {
         Email: vars.Email,
         Phone: vars.Phone,
         Major: vars.Major,
-        Did: vars.Did
+        Did: vars.D_id
     };
     await updateSql.updateStudent(data);
     res.redirect('/');
